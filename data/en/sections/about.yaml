@@ -1,0 +1,104 @@
+# section information
+section:
+  name: About
+  id: about
+  enable: true
+  weight: 1
+  showOnNavbar: true
+  template: sections/about.html
+
+# your designation
+designation: Data Analyst
+# your company information
+company:
+  name: Nblik.
+  url: "https://nblik.com/"
+
+# your resume. this file path should be relative to you "static" directory
+resume: "files/resume.pdf"
+
+# a summary about you
+summary: 'I am a Data Analyst passionate about turning raw data into actionable insights that drive business decisions. Experienced in data cleaning, transformation, and statistical analysis, I build interactive dashboards and visualizations to help teams make informed choices.'
+
+# your social links
+# give as many as you want. use font-awesome for the icons.
+socialLinks:
+- name: Email
+  icon: "fas fa-envelope"
+  url: "shivangkushwaha2905@gmail.com"
+
+- name: Github
+  icon: "fab fa-github"
+  url: "https://github.com/Shivangkus"
+
+#- name: Stackoverflow
+#  icon: "fab fa-stack-overflow"
+#  url: "#"
+
+- name: LinkedIn
+  icon: "fab fa-linkedin"
+  url: "https://www.linkedin.com/in/shivangkushwaha/"
+
+# name: Twitter
+# icon: "fab fa-twitter"
+# url: "#"
+
+# name: Facebook
+# icon: "fab fa-facebook"
+# url: "#"
+
+# Show your badges
+# You can show your verifiable certificates from https://www.credly.com.
+# You can also show a circular bar indicating the level of expertise on a certain skill
+badges:
+- type: certification
+  name:  Career Essentials in Data Analysis by Microsoft and LinkedIn
+  url: "https://media.licdn.com/dms/image/v2/D4D22AQHm5noOfin62w/feedshare-shrink_1280/B4DZggWNvJHwAk-/0/1752889351394?e=1761782400&v=beta&t=FCOfndy9vYKXdJsnQtb8fIbLlPRAR_xZY18M0CFDY9Q"
+  badge: "https://media.licdn.com/dms/image/v2/D4D22AQHm5noOfin62w/feedshare-shrink_1280/B4DZggWNvJHwAk-/0/1752889351394?e=1761782400&v=beta&t=FCOfndy9vYKXdJsnQtb8fIbLlPRAR_xZY18M0CFDY9Q"
+
+- type: certification
+  name:  Google Analytics Certification
+  url: "https://images.credly.com/images/f53c1eb6-d93d-4b9e-ae34-922046f6b15c/image.png"
+  badge: "https://images.credly.com/images/f53c1eb6-d93d-4b9e-ae34-922046f6b15c/image.png"
+
+- type: certification
+  name: Atlassian Agile Project Management Professional Certificate
+  url: "https://media.licdn.com/dms/image/v2/D4D22AQFOm-CQzh8FbA/feedshare-shrink_1280/feedshare-shrink_1280/0/1715409834990?e=1761782400&v=beta&t=dYaAYYfcP4e7fUgOpKJOYkEm19Tg740TiF_YceKZ_b8"
+  badge: "https://media.licdn.com/dms/image/v2/D4D22AQFOm-CQzh8FbA/feedshare-shrink_1280/feedshare-shrink_1280/0/1715409834990?e=1761782400&v=beta&t=dYaAYYfcP4e7fUgOpKJOYkEm19Tg740TiF_YceKZ_b8"
+
+- type: certification
+  name:  Zendesk Customer Service Professional Certificate
+  url: "https://media.licdn.com/dms/image/v2/D4D22AQFHuaS7BqDvJQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1712436852716?e=1761782400&v=beta&t=yaKEMvE066Denh7c8h9Hd3kkqCDUMjFvaw4ffg1Q6D0"
+  badge: "https://media.licdn.com/dms/image/v2/D4D22AQFHuaS7BqDvJQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1712436852716?e=1761782400&v=beta&t=yaKEMvE066Denh7c8h9Hd3kkqCDUMjFvaw4ffg1Q6D0"
+
+- type: certification
+  name:  Career Essentials in GitHub Professional Certificate
+  url: "https://media.licdn.com/dms/image/v2/D5622AQEYHSXRdAzSDw/feedshare-shrink_1280/feedshare-shrink_1280/0/1717011664912?e=1761782400&v=beta&t=U5W09WUfORV8UiWE2tNpOxHrdD6vBiAyQY-k9zbicOw"
+  badge: "https://media.licdn.com/dms/image/v2/D5622AQEYHSXRdAzSDw/feedshare-shrink_1280/feedshare-shrink_1280/0/1717011664912?e=1761782400&v=beta&t=U5W09WUfORV8UiWE2tNpOxHrdD6vBiAyQY-k9zbicOw"
+
+- type: certification
+  name:  Career Essentials in Software Development by Microsoft and LinkedIn
+  url: "https://media.licdn.com/dms/image/v2/D5622AQEEMhkxgxtQkQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1717007316687?e=1761782400&v=beta&t=uOt7n0jsMbu2xUJHx0syXyw2jIItkOgNXaWFxYaqE6g"
+  badge: "https://media.licdn.com/dms/image/v2/D5622AQEEMhkxgxtQkQ/feedshare-shrink_1280/feedshare-shrink_1280/0/1717007316687?e=1761782400&v=beta&t=uOt7n0jsMbu2xUJHx0syXyw2jIItkOgNXaWFxYaqE6g"
+
+
+- type: soft-skill-indicator
+  name: Leadership
+  percentage: 85
+  color: blue
+
+- type: soft-skill-indicator
+  name: Team Work
+  percentage: 90
+  color: yellow
+
+- type: soft-skill-indicator
+  name: Hard Working
+  percentage: 85
+  color: orange
+
+# you can also provide color code instead of the color name
+# - type: soft-skill-indicator
+#   name: Example 1
+#   percentage: 75
+#   color: "#00adb5"

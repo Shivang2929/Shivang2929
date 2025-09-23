@@ -1,0 +1,99 @@
+# section information
+section:
+  name: Education
+  id: education
+  template: sections/education.html # Use "sections/education-alt.html for alternate template.
+  enable: true
+  weight: 4
+  showOnNavbar: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+degrees:
+
+- name: Master of Technology (M.Tech) in Cyber Security
+  icon: fa-graduation-cap
+  timeframe: 2022-2024
+  institution:
+    name: Gyan Ganga Institute of Technology & Sciences
+    url: "#"
+    logo: /images/sections/education/university.jpg
+    # Can optionally show a different logo for dark theme
+    # darkLogo: /images/sections/education/university.jpg
+  grade: #(optional)
+    scale: CGPA
+    achieved: 8.46
+    outOf: 10
+  takenCourses: #(optional)
+    # if true, the courses will be rendered as a table otherwise it will render as a list and the grades will be hidden.
+    showGrades: true
+    collapseAfter: 3
+    courses:
+    - name: Operating Systems and Security
+      achieved: 4
+      outOf: 4
+    - name: Database Security and Privacy
+      achieved: 4
+      outOf: 4
+    - name: CyberLaw and Emerging jurisprudence
+      achieved: 4
+      outOf: 4
+    - name: E-Commerce Security
+      achieved: 4
+      outOf: 4
+    - name: Cryptography and Network Security
+      achieved: 4
+      outOf: 4
+    - name: Digital Forensics
+      achieved: 4
+      outOf: 4
+    - name: Computer forensics and Investigations
+      achieved: 4
+      outOf: 4
+    - name: Mobile Device Security and Forensics
+      achieved: 4
+      outOf: 4
+    - name: Internet Security - Tcp/Ip vulnerabilities
+      achieved: 4
+      outOf: 4
+    - name: Secure Cloud Computing
+      achieved: 4
+      outOf: 4
+  
+  publications: #(optional)
+  - title: Design and development of smart contract system for blockchain based applications.
+    url: "#"
+
+  extracurricularActivities: #(optional)
+    - Active participant in hackathons and coding competitions.
+    - Volunteered in institute-level technical and cultural events.
+  customSections: #(optional)
+    - name: Thesis
+      content: Design and development of smart contract system for blockchain based applications
+
+- name: Bachelor of Technology (B.Tech) in Computer Science and Engineering
+  icon: fa-university
+  timeframe: 2017-2021
+  institution:
+    name: Gyan Ganga Institute of Technology & Sciences
+    url: "#"
+    logo: /images/sections/education/science_college.png
+    # Can optionally show a different logo for dark theme
+    # darkLogo: /images/sections/education/science_college.png
+  grade: #(optional)
+    scale: GPA
+    achieved: 5
+    outOf: 5
+  extracurricularActivities: #(optional)
+  - Worked on mini-projects showcasing practical applications of programming and web development.
+  - Organized team-building and coding events for juniors.
+
+- name: Class XII (ICSE Board)
+  icon: fa-school
+  timeframe: 2005-2010
+  institution:
+    name: MGM Higher Secondary School
+  grade: #(optional)
+    scale: GPA
+    achieved: 4.5
+    outOf: 5

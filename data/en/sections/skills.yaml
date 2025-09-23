@@ -1,0 +1,100 @@
+# section information
+section:
+  name: Skills
+  id: skills
+  enable: true
+  weight: 2
+  showOnNavbar: true
+  filter: true
+  # Can optionally hide the title in sections
+  # hideTitle: true
+
+# filter buttons
+buttons:
+- name: All
+  filter: "all"
+- name: Language
+  filter: "language"
+- name: Data Analyst
+  filter: "Data analyst"
+- name: Software Developer
+  filter: "sd"
+
+# Your Skills.
+# Give a summary of you each skill in the summary section.
+skills:
+- name: SQL
+  logo: 
+  summary: "Experienced in writing efficient queries, creating complex joins, stored procedures, and optimizing database performance for reporting and analytics."
+  categories: ["Data analyst"]
+  url: "https://www.mysql.com/"
+
+- name: Java
+  logo: 
+  summary: "Proficient in Java programming, OOP concepts, data structures, and building scalable applications."
+  categories: ["language"]
+  url: "https://www.java.com/en/"
+
+- name: Power BI
+  logo: 
+  summary: "Experienced in designing and developing dynamic dashboards, DAX calculations, data modeling, and performance optimization for business reporting."
+  categories: ["Data analyst"]
+
+- name: MS Excel
+  logo: 
+  summary: "Skilled in advanced Excel functionalities including formulas, pivot tables, charts, data analysis, conditional formatting, and data visualization to derive actionable insights."
+  categories: ["Data analyst"]
+ 
+
+- name: Google Sheets
+  logo: 
+  summary: "Proficient in using Google Sheets for data organization, analysis, and visualization; skilled in formulas, pivot tables, charts, and collaborative spreadsheet workflows."
+  categories: ["Data analyst"]
+ 
+
+- name: Tableau
+  logo: 
+  summary: "Skilled in creating interactive dashboards and data visualizations, performing data analysis, and transforming complex datasets into actionable insights using Tableau Desktop and Tableau Server."
+  categories: ["Data analyst"]
+
+- name: Python
+  logo: 
+  summary: "Proficient in Python programming for data analysis, automation, scripting, and application development; experienced with libraries such as Pandas, NumPy, Matplotlib, and integrating with databases and APIs."
+  categories: ["language","Data analyst"]
+  url: "https://www.python.org/"
+
+- name: AWS
+  logo: 
+  summary: "Skilled in using AWS services such as EC2, S3, RDS, Lambda, CloudFormation, QuickSight, and Glue for cloud-based application development, data integration, and infrastructure management."
+  categories: ["Data Analyst"]
+
+- name: Pandas
+  logo: 
+  summary: "Proficient in using Pandas for data manipulation, cleaning, transformation, and analysis; experienced in handling large datasets, performing aggregations, and preparing data for visualization or modeling."
+  categories: ["Data analyst"]
+
+- name: React
+  logo: 
+  summary: "Proficient in building dynamic, responsive, and component-based web applications using React.js. Experienced with state management, hooks, routing, and integrating APIs for seamless user experiences."
+  categories: ["sd"]
+
+- name: MongoDB
+  logo: 
+  summary: "Experienced in designing and managing NoSQL databases, performing CRUD operations, data modeling, and optimizing queries for scalable applications."
+  categories: ["sd"]
+
+- name: Node.js
+  logo: 
+  summary: "Proficient in building scalable and efficient backend applications using Node.js. Experienced with RESTful APIs, server-side logic, asynchronous programming, and integrating databases like MongoDB and SQL."
+  categories: ["sd"]
+
+- name: Express.js
+  logo: 
+  summary: "Experienced in building robust and scalable web applications and APIs using Express.js. Skilled in routing, middleware, server-side logic, and integrating with databases like MongoDB and SQL."
+  categories: ["sd"]
+
+- name: Tailwind
+  logo: 
+  summary: "Skilled in building responsive, modern, and visually appealing user interfaces using Tailwind CSS. Experienced with utility-first styling, custom components, and integrating Tailwind with React and other frontend frameworks."
+  categories: ["sd"]
+

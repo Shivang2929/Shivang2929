@@ -45,7 +45,7 @@ other = "By entering your email address, you agree to receive the newsletter of 
 other = "Submit"
 
 [hugoAttributionText]
-other = "Powered by"
+other = ""
 
 [prev]
 other = "Prev"

@@ -1,0 +1,19 @@
+name: "Shivang Kushwaha"
+nickname: "Shivang"
+# greeting message before your name. it will default to "Hi! I am" if not provided
+greeting: "Hi, I am"
+image: ""
+# give your some contact information. they will be used in the footer
+contactInfo:
+  email: "Shivangkushwaha2905@gmail.com"
+  phone: "+917999842579"
+  github: Shivangkus
+  linkedin: shivangkushwaha
+
+# some summary about what you do
+summary:
+  - I am a Data Analyst
+  - I am a Developer
+  - I love Data
+  - I work on open-source projects
+  - I love to work with some fun projects
