@@ -12,12 +12,30 @@ section:
 buttons:
 - name: All
   filter: "all"
-- name: Professional
-  filter: "professional"
-- name: Academic
-  filter: "academic"
+- name: Data Analyst
+  filter: "Data analyst"
+- name: Software Developer
+  filter: "Software Developer"
 - name: Hobby
-  filter: "hobby"
+  filter: "Hobby"
 
 # your projects
 projects:
+- name: sayingsseeker
+  logo: images/projects/sayingsseeker.png
+  role: Developer
+  timeline: "March 2020 - April 2020"
+  #repo: https://github.com/Shivangkus/sayingsseeker
+  url: "https://sayingsseeker.netlify.app/"
+  summary: SayingsSeeker is a dynamic web application designed to provide users with a vast collection of motivational and inspirational quotes. Built using React, the app offers a seamless and engaging user experience.
+  tags: ["Software Developer", "React", "Hobby"]
+
+- name: CredSafe
+  logo: /images/projects/sayingsseeker.png
+  role: Developer
+  timeline: "Jun 2021 - august 2021"
+  #repo: https://github.com/tensorflow/tensorflow
+  url: "https://credsafe.netlify.app/"
+  summary: CredSafe is a secure and user-friendly password manager designed to help users generate, store, and manage their passwords with ease. Built using modern web technologies, CredSafe offers a seamless experience for safeguarding sensitive information.
+  tags: ["Software Developer","React","Hobby"]
+
