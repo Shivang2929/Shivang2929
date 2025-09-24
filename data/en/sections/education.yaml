@@ -81,19 +81,24 @@ degrees:
     # Can optionally show a different logo for dark theme
     # darkLogo: /images/sections/education/science_college.png
   grade: #(optional)
-    scale: GPA
-    achieved: 5
-    outOf: 5
+    scale: CGPA
+    achieved: 7.43
+    outOf: 10
   extracurricularActivities: #(optional)
   - Worked on mini-projects showcasing practical applications of programming and web development.
   - Organized team-building and coding events for juniors.
 
 - name: Class XII (ICSE Board)
   icon: fa-school
-  timeframe: 2005-2010
+  timeframe: 2016-2017
   institution:
     name: MGM Higher Secondary School
-  grade: #(optional)
-    scale: GPA
-    achieved: 4.5
-    outOf: 5
+  #grade: #(optional)
+  #  scale: GPA
+  #  achieved: 4.5
+  #  outOf: 5
+- name: Class X (ICSE Board)
+  icon: fa-school
+  timeframe: 2014-2015
+  institution:
+    name: MGM Higher Secondary School
