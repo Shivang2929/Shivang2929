@@ -39,3 +39,12 @@ projects:
   summary: CredSafe is a secure and user-friendly password manager designed to help users generate, store, and manage their passwords with ease. Built using modern web technologies, CredSafe offers a seamless experience for safeguarding sensitive information.
   tags: ["Software Developer","React","Hobby"]
 
+- name: SQL Data Exploration - COVID-19 Analysis
+  logo: /images/projects/sayingsseeker.png
+  role: Owner
+  timeline: "February 2023 - March 2023"
+  repo: https://github.com/Shivangkus/sql-data-exploration/
+  #url: "https://credsafe.netlify.app/"
+  summary: Explored and analyzed COVID-19 datasets using SQL to uncover insights on cases, deaths, and vaccination trends. Worked with raw data from Excel files and performed data cleaning, aggregation, and filtering to generate meaningful reports. The project demonstrates hands-on experience in SQL data exploration, data analysis, and handling real-world public health datasets.
+  tags: ["Data analyst","SQL"]
+
