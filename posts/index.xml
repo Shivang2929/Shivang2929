@@ -1,39 +1,74 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Shivang Kushwaha</title><link>https://hugo-toha.github.io/posts/</link><description>Recent content in Posts on Shivang Kushwaha</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Thu, 08 Jun 2023 06:00:23 +0600</lastBuildDate><atom:link href="https://hugo-toha.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>Data Cleaning : Data Standardization with SQL</title><link>https://hugo-toha.github.io/posts/data-standardization---sql/</link><pubDate>Thu, 08 Jun 2023 06:00:23 +0600</pubDate><guid>https://hugo-toha.github.io/posts/data-standardization---sql/</guid><description>&lt;p&gt;Data standardization is a fundamental step in data management to ensure data quality and consistency making it suitable for analysis, reporting, and decision-making.Overall, failing to standardize data can result in data that is difficult to work with, error-prone, and less reliable.&lt;/p&gt;
-&lt;p&gt;Let’s explore the process of data cleaning and put it into practice using a specific dataset. The dataset follows the schema outlined below…&lt;/p&gt;
-&lt;div class="highlight"&gt;&lt;pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"&gt;&lt;code class="language-sql" data-lang="sql"&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;--Below script works on mysql
-&lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#75715e"&gt;&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;CREATE&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;database&lt;/span&gt; pizza_runner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;USE pizza_runner;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;CREATE&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;TABLE&lt;/span&gt; runner_orders (
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; order_id INTEGER,
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; runner_id INTEGER,
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; pickup_time VARCHAR(&lt;span style="color:#ae81ff"&gt;19&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; distance VARCHAR(&lt;span style="color:#ae81ff"&gt;7&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; duration VARCHAR(&lt;span style="color:#ae81ff"&gt;10&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; cancellation VARCHAR(&lt;span style="color:#ae81ff"&gt;23&lt;/span&gt;)
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;INSERT&lt;/span&gt; &lt;span style="color:#66d9ef"&gt;INTO&lt;/span&gt; runner_orders
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (order_id, runner_id, pickup_time, distance, duration, cancellation)
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;VALUES&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (&lt;span style="color:#e6db74"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2020-01-01 18:15:34&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;20km&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;32 minutes&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;&amp;#39;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (&lt;span style="color:#e6db74"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2020-01-01 19:10:54&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;20km&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;27 minutes&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;&amp;#39;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (&lt;span style="color:#e6db74"&gt;&amp;#39;3&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2020-01-03 00:12:37&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;13.4km&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;20 mins&amp;#39;&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;NULL&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (&lt;span style="color:#e6db74"&gt;&amp;#39;4&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2020-01-04 13:53:03&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;23.4&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;40&amp;#39;&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;NULL&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (&lt;span style="color:#e6db74"&gt;&amp;#39;5&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;3&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2020-01-08 21:10:57&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;10&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;15&amp;#39;&lt;/span&gt;, &lt;span style="color:#66d9ef"&gt;NULL&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (&lt;span style="color:#e6db74"&gt;&amp;#39;6&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;3&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;null&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;null&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;null&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;Restaurant Cancellation&amp;#39;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (&lt;span style="color:#e6db74"&gt;&amp;#39;7&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2020-01-08 21:30:45&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;25km&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;25mins&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;null&amp;#39;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (&lt;span style="color:#e6db74"&gt;&amp;#39;8&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2020-01-10 00:15:02&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;23.4 km&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;15 minute&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;null&amp;#39;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (&lt;span style="color:#e6db74"&gt;&amp;#39;9&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;null&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;null&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;null&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;Customer Cancellation&amp;#39;&lt;/span&gt;),
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; (&lt;span style="color:#e6db74"&gt;&amp;#39;10&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;1&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;2020-01-11 18:50:20&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;10km&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;10minutes&amp;#39;&lt;/span&gt;, &lt;span style="color:#e6db74"&gt;&amp;#39;null&amp;#39;&lt;/span&gt;);
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;SELECT&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; &lt;span style="color:#f92672"&gt;*&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt;&lt;span style="color:#66d9ef"&gt;FROM&lt;/span&gt;
-&lt;/span&gt;&lt;/span&gt;&lt;span style="display:flex;"&gt;&lt;span&gt; runner_orders;
-&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;More information about the above database can be found on this link.&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>Posts on Shivang Kushwaha</title><link>https://hugo-toha.github.io/posts/</link><description>Recent content in Posts on Shivang Kushwaha</description><generator>Hugo -- gohugo.io</generator><language>en</language><lastBuildDate>Mon, 08 Jul 2024 06:00:23 +0600</lastBuildDate><atom:link href="https://hugo-toha.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>When Pikachu Meets SQL: A Data Analyst’s Pokémon Adventures</title><link>https://hugo-toha.github.io/posts/pokemon-adventure-as-a-data-analyst/</link><pubDate>Mon, 08 Jul 2024 06:00:23 +0600</pubDate><guid>https://hugo-toha.github.io/posts/pokemon-adventure-as-a-data-analyst/</guid><description>&lt;p&gt;Being a data analyst is one thing… being a &lt;strong&gt;Pokémon data analyst&lt;/strong&gt; is another. Imagine trying to calculate trends when your dataset includes:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Pikachu’s electricity output ⚡&lt;/li&gt;
+&lt;li&gt;Charmander’s flame length 🔥&lt;/li&gt;
+&lt;li&gt;Bulbasaur’s photosynthesis efficiency 🌿&lt;/li&gt;
+&lt;li&gt;Magikarp’s… well, jumping height?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="morning"&gt;Morning&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Coffee ☕&lt;/li&gt;
+&lt;li&gt;Open SQL, Python, and Pokédex CSV all at once.&lt;/li&gt;
+&lt;li&gt;Notice that 42 Pikachu entries have &lt;code&gt;null&lt;/code&gt; for &lt;code&gt;Thunderbolt Damage&lt;/code&gt;. Panic ensues.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="midday"&gt;Midday&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Trying to create a scatter plot of Charmander flame length vs. battle victories.&lt;/li&gt;
+&lt;li&gt;Realize half the values are “over 9000” because someone added anime exaggeration.&lt;/li&gt;
+&lt;li&gt;Normalize the data, pray no one notices.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="afternoon"&gt;Afternoon&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Merge datasets: Pokémon stats + battle history + gym locations.&lt;/li&gt;
+&lt;li&gt;Debug error: Magikarp’s jump height is in meters, Pikachu’s in volts…&lt;/li&gt;
+&lt;li&gt;Cry internally.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="evening"&gt;Evening&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Make a dashboard: top 10 Pokémon by total damage.&lt;/li&gt;
+&lt;li&gt;Coworker asks: “Why is Magikarp number 3?”&lt;/li&gt;
+&lt;li&gt;Me: &lt;em&gt;Data speaks louder than logic.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Being a Pokémon data analyst requires patience, creativity, and the ability to explain to your manager why “Ditto can transform into any Pokémon, so yes, it counts as everyone.”&lt;/p&gt;</description></item><item><title>Confessions of a Data Analyst: Tales from the Spreadsheet Trenches</title><link>https://hugo-toha.github.io/posts/confession-of-data-analyst/</link><pubDate>Sat, 08 Jun 2024 06:00:20 +0600</pubDate><guid>https://hugo-toha.github.io/posts/confession-of-data-analyst/</guid><description>&lt;p&gt;Being a data analyst is like being a detective, but instead of solving crimes, we solve mysteries like:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Why does this Excel file have 1,024 sheets?&lt;/li&gt;
+&lt;li&gt;Who changed the column name from &lt;code&gt;Revenue&lt;/code&gt; to &lt;code&gt;Revnue&lt;/code&gt;… in production?&lt;/li&gt;
+&lt;li&gt;Why is the sum of the parts greater than the total?&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Here’s a typical day in the life:&lt;/p&gt;
+&lt;h3 id="morning"&gt;Morning&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Coffee ☕&lt;/li&gt;
+&lt;li&gt;Open SQL, Python, and Excel all at once (because why not juggle three languages before 9 AM?)&lt;/li&gt;
+&lt;li&gt;Realize the database has missing values. Panic ensues.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="midday"&gt;Midday&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Dashboards, charts, and graphs!&lt;/li&gt;
+&lt;li&gt;Spend 45 minutes deciding if a bar chart should be horizontal or vertical.&lt;/li&gt;
+&lt;li&gt;Coworker asks: “Can you make it pop?”&lt;/li&gt;
+&lt;li&gt;Me: &lt;em&gt;Sure… with rainbow colors and Comic Sans?&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="afternoon"&gt;Afternoon&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Data cleaning: the never-ending story.&lt;/li&gt;
+&lt;li&gt;Convert &lt;code&gt;N/A&lt;/code&gt;, &lt;code&gt;null&lt;/code&gt;, &lt;code&gt;-&lt;/code&gt;, &lt;code&gt;missing&lt;/code&gt;, and &lt;code&gt;???&lt;/code&gt; into actual NULL values.&lt;/li&gt;
+&lt;li&gt;Write a SQL query so elegant, it deserves a Nobel Prize.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h3 id="evening"&gt;Evening&lt;/h3&gt;
+&lt;ul&gt;
+&lt;li&gt;Review reports, send emails, feel accomplished.&lt;/li&gt;
+&lt;li&gt;Realize you forgot to update the date filter. All charts are wrong.&lt;/li&gt;
+&lt;li&gt;Cry a little.&lt;/li&gt;
+&lt;li&gt;Repeat tomorrow.&lt;/li&gt;
+&lt;/ul&gt;
+&lt;hr&gt;
+&lt;p&gt;Being a data analyst isn’t just numbers, charts, or queries. It’s patience, humor, and a love for finding answers where others see chaos.&lt;/p&gt;</description></item><item><title>Why I Love SQL</title><link>https://hugo-toha.github.io/posts/why-i-love-sql/</link><pubDate>Thu, 08 Jun 2023 06:00:23 +0600</pubDate><guid>https://hugo-toha.github.io/posts/why-i-love-sql/</guid><description>&lt;p&gt;SQL is like a superpower for data. With just a few queries, you can:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;Extract insights from messy data&lt;/li&gt;
+&lt;li&gt;Aggregate, filter, and sort information in seconds&lt;/li&gt;
+&lt;li&gt;Transform raw numbers into meaningful reports&lt;/li&gt;
+&lt;/ul&gt;
+&lt;p&gt;Whether it’s &lt;code&gt;SELECT&lt;/code&gt;, &lt;code&gt;JOIN&lt;/code&gt;, or &lt;code&gt;GROUP BY&lt;/code&gt;, SQL lets me turn chaos into clarity. Every data analyst’s best friend!&lt;/p&gt;
+&lt;p&gt;Pro tip: Always keep a coffee nearby ☕ while running queries.&lt;/p&gt;</description></item></channel></rss>
