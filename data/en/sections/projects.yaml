@@ -45,6 +45,14 @@ projects:
   timeline: "February 2023 - March 2023"
   repo: https://github.com/Shivangkus/sql-data-exploration/
   #url: "https://credsafe.netlify.app/"
-  summary: Explored and analyzed COVID-19 datasets using SQL to uncover insights on cases, deaths, and vaccination trends. Worked with raw data from Excel files and performed data cleaning, aggregation, and filtering to generate meaningful reports. The project demonstrates hands-on experience in SQL data exploration, data analysis, and handling real-world public health datasets.
+  summary: Explored and analyzed COVID-19 datasets using SQL to uncover insights on cases, deaths, and vaccination trends. Worked with raw data from Excel files and performed data cleaning, aggregation, and filtering to generate meaningful reports. The project demonstrates hands-on experience in SQL data exploration, data analysis, and handling real-world public health datasets. Skills used => Joins, CTE's, Temp Tables, Windows Functions, Aggregate Functions, Creating Views, Converting Data Types.
   tags: ["Data analyst","SQL"]
 
+- name: Data Cleaning in SQL
+  logo: /images/projects/datacleaning.png
+  role: Owner
+  timeline: "April 2023 - May 2023"
+  repo: https://github.com/Shivangkus/Data-Cleaning-in-SQL
+  #url: ""
+  summary: Cleaned and transformed raw housing dataset using SQL to ensure accuracy, consistency, and reliability for analysis. Applied techniques such as handling null values, removing duplicates, standardizing date formats, splitting and updating columns, and correcting data types. The project highlights practical data cleaning steps essential in real-world analytics workflows. Skills used => Joins, CTE's, Aggregate Functions, String Functions, Date Functions, Data Type Conversions, Updating and Altering Tables.
+  tags: ["Data analyst","SQL","Data Cleaning"]
