@@ -56,3 +56,57 @@ projects:
   #url: ""
   summary: Cleaned and transformed raw housing dataset using SQL to ensure accuracy, consistency, and reliability for analysis. Applied techniques such as handling null values, removing duplicates, standardizing date formats, splitting and updating columns, and correcting data types. The project highlights practical data cleaning steps essential in real-world analytics workflows. Skills used => Joins, CTE's, Aggregate Functions, String Functions, Date Functions, Data Type Conversions, Updating and Altering Tables.
   tags: ["Data analyst","SQL","Data Cleaning"]
+
+- name: SQL Data Analytics Project
+  logo: /images/projects/datacleaning.png
+  role: Owner
+  timeline: "November 2024 - December 2024"
+  repo: https://github.com/Shivangkus/Sql-Data-Analystics-Project
+  #url: ""
+  summary: Developed a comprehensive suite of SQL scripts aimed at data exploration, analytics, and reporting.This project encompasses a variety of analyses, including database exploration, measures and metrics, time-based trends, cumulative analytics, segmentation, and more. Each script is designed to assist data analysts and business intelligence professionals in efficiently exploring, segmenting, and analyzing data within relational databases.
+  tags: ["Data analyst","SQL","Data Analysis"]
+
+- name: Amazon Web Scraper Project
+  logo: /images/projects/amazon-scraper.png
+  role: Owner
+  timeline: "October 2024 - November 2024"
+  repo: https://github.com/Shivangkus/Amazon-Web-Scraper-Project
+  #url: ""
+  summary: Developed a Python-based web scraping tool to extract Amazon product data, including titles, prices, ratings, and reviews. This project demonstrates techniques for web scraping, data extraction, and storage using libraries like BeautifulSoup and Pandas. It can be used for product analysis, price tracking, and market research.
+  tags: ["Python","Web Scraping","Data analyst","Amazon"]
+
+- name: Sales Performance Analysis
+  logo: /images/projects/amazon-scraper.png
+  role: Owner
+  timeline: "March 2023 - April 2023"
+  repo: https://github.com/Shivangkus/Sales-Performance-Analysis
+  #url: ""
+  summary: Designed and developed a Business Intelligence dashboard to analyze sales performance using Power BI. The project includes KPIs such as revenue, profit, and growth, along with product, customer, and regional insights. It demonstrates data cleaning, modeling, and visualization techniques for data-driven decision-making.
+  tags: ["PowerBI","Data analyst"]
+  
+- name: U.S. Healthcare Industry Dynamics
+  logo: /images/projects/healthcare-industry.png
+  role: Owner
+  timeline: "May 2023 - June 2023"
+  repo: https://github.com/Shivangkus/U.S.-Healthcare-Industry-Dynamics
+  #url: ""
+  summary: Built a BI dashboard analyzing the dynamics of the U.S. healthcare industry. Included metrics on market size, growth trends, payer mix, and cost drivers. Data modeling, visualizations, and schema design support stakeholder insights on policy, costs, and industry structure.
+  tags: ["PowerBI","Healthcare Analytics","Business Intelligence","Data Visualization","Data analyst"]
+
+- name: HR Workforce Analysis
+  logo: /images/projects/hr-workforce.png
+  role: Owner
+  timeline: "July 2023 - August 2023"
+  repo: https://github.com/Shivangkus/HR-Workforce-Analysis
+  #url: ""
+  summary: Developed an interactive HR analytics dashboard to visualize workforce metrics such as employee demographics, attrition trends, recruitment efficiency, and performance insights. Built using Power BI, this project helps HR teams make data-driven decisions.
+  tags: ["PowerBI","Business Intelligence","Dashboard","Data analyst"]
+
+- name: Data Professional Survey Breakdown
+  logo: /images/projects/data-survey.png
+  role: Owner
+  timeline: "September 2023 - October 2023"
+  repo: https://github.com/Shivangkus/Data-Professional-Survey-Breakdown
+  #url: ""
+  summary: Developed an interactive Power BI dashboard analyzing global survey data of data professionals. The project explores demographics, career satisfaction, salary trends, programming language usage, and career transitions to provide actionable insights for data enthusiasts and HR teams.
+  tags: ["PowerBI","Data analyst","Dashboard","Survey Analytics"]
